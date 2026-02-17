@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Zhang | Senior Cloud Architect & Tech Blogger</title>
+    <meta name="description" content="Xin Zhang - Senior Cloud Architect, Open Source Contributor, Tech Blogger, and Hand-drawn Art Enthusiast">
+    <meta name="author" content="Xin Zhang">
+    <meta name="theme-color" content="#202124">
+    <meta property="og:title" content="Xin Zhang | Senior Cloud Architect & Tech Blogger">
+    <meta property="og:description" content="AWS Senior Cloud Architect, Apache open-source contributor, tech blogger, and hand-drawn art enthusiast.">
+    <meta property="og:image" content="images/avatar.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Xin Zhang | Senior Cloud Architect & Tech Blogger">
+    <meta name="twitter:description" content="AWS Senior Cloud Architect, Apache open-source contributor, tech blogger, and hand-drawn art enthusiast.">
+    <meta name="twitter:image" content="images/avatar.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Manga speed lines background -->
+    <div class="speed-lines"></div>
+
+    <!-- Floating geometric shapes (Google-style colors) -->
+    <div class="geo-shapes" aria-hidden="true">
+        <div class="geo geo-circle" style="--color: #4285F4; --size: 80px; top: 10%; left: 5%;"></div>
+        <div class="geo geo-triangle" style="--color: #EA4335; --size: 60px; top: 20%; right: 8%;"></div>
+        <div class="geo geo-square" style="--color: #FBBC05; --size: 50px; top: 60%; left: 3%;"></div>
+        <div class="geo geo-circle" style="--color: #34A853; --size: 40px; top: 80%; right: 5%;"></div>
+        <div class="geo geo-diamond" style="--color: #4285F4; --size: 45px; top: 40%; right: 2%;"></div>
+        <div class="geo geo-triangle" style="--color: #FBBC05; --size: 35px; top: 90%; left: 10%;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Xin</span>
+                <span class="logo-slash">/</span>
+                <span class="logo-bracket">&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#publications" class="nav-link" data-i18n="nav.blog">Publications</a>
+                <a href="#artwork" class="nav-link" data-i18n="nav.artwork">Artwork</a>
+                <a href="#resume" class="nav-link" data-i18n="nav.resume">Resume</a>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" title="Switch Language">
+                    <span class="lang-label" id="langLabel">EN</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="comic-bubble hero-greeting">
+                    <span data-i18n="hero.greeting">Hey! I'm</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-char" style="--color: #4285F4">X</span>
+                    <span class="name-char" style="--color: #EA4335">i</span>
+                    <span class="name-char" style="--color: #FBBC05">n</span>
+                    <span class="name-char" style="--color: #34A853">&nbsp;</span>
+                    <span class="name-char" style="--color: #4285F4">Z</span>
+                    <span class="name-char" style="--color: #EA4335">h</span>
+                    <span class="name-char" style="--color: #FBBC05">a</span>
+                    <span class="name-char" style="--color: #34A853">n</span>
+                    <span class="name-char" style="--color: #4285F4">g</span>
+                </h1>
+                <div class="hero-titles">
+                    <span class="hero-title manga-text" data-i18n="hero.title1">Senior Cloud Architect</span>
+                    <span class="title-divider">|</span>
+                    <span class="hero-title manga-text" data-i18n="hero.title2">Open Source Contributor</span>
+                    <span class="title-divider">|</span>
+                    <span class="hero-title manga-text" data-i18n="hero.title3">Tech Blogger</span>
+                    <span class="title-divider">|</span>
+                    <span class="hero-title manga-text" data-i18n="hero.title4">Hand-drawn Art Enthusiast</span>
+                </div>
+                <p class="hero-desc" data-i18n="hero.desc">AWS Senior Cloud Architect specializing in data & AI, active Apache open-source contributor, tech blogger, and hand-drawn art enthusiast. Bridging cloud architecture, open source, and art.</p>
+                <div class="hero-cta">
+                    <a href="#publications" class="btn btn-primary comic-btn" data-i18n="hero.cta1">Publications</a>
+                    <a href="#artwork" class="btn btn-secondary comic-btn" data-i18n="hero.cta2">View Art</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="manga-frame">
+                    <div class="manga-panel avatar-panel">
+                        <img src="images/avatar.png" alt="Xin Zhang" class="avatar-img">
+                        <div class="panel-effect-lines"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span data-i18n="hero.scroll">Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section blog-section" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <div class="comic-title-wrapper">
+                    <h2 class="section-title comic-title">
+                        <span class="title-icon">&#x1F4DD;</span>
+                        <span data-i18n="blog.title">Publications & Talks</span>
+                    </h2>
+                    <div class="comic-title-bg"></div>
+                </div>
+                <p class="section-subtitle" data-i18n="blog.subtitle">Blogs, conference sessions, workshops, meetups, and open-source contributions</p>
+            </div>
+
+            <!-- Category filters -->
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="blog.filter.all">All</button>
+                <button class="filter-btn" data-filter="conference" data-i18n="blog.filter.conference">Conference</button>
+                <button class="filter-btn" data-filter="blog" data-i18n="blog.filter.blog">Blog</button>
+                <button class="filter-btn" data-filter="workshop" data-i18n="blog.filter.workshop">Workshop</button>
+                <button class="filter-btn" data-filter="meetup" data-i18n="blog.filter.meetup">Meetup</button>
+                <button class="filter-btn" data-filter="opensource" data-i18n="blog.filter.opensource">Open Source</button>
+                <button class="filter-btn" data-filter="elearning" data-i18n="blog.filter.elearning">E-Learning</button>
+                <span class="filter-divider">|</span>
+                <button class="filter-btn" data-filter="lang-en" data-i18n="blog.filter.lang.en">English</button>
+                <button class="filter-btn" data-filter="lang-cn" data-i18n="blog.filter.lang.cn">Chinese</button>
+            </div>
+
+            <div class="pub-list">
+
+                <!-- === Conferences === -->
+                <a href="https://opensearchcon-china-2026.sessionize.com/session/1103267" class="pub-item manga-card" data-lang="en" data-category="conference" target="_blank" rel="noopener">
+                    <div class="pub-badge conference">Conference</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.conf1">OpenSearchCon China 2026 <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">Session Speaker &middot; 2026</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://asia.communityovercode.org/sessions/dataops-906790.html" class="pub-item manga-card" data-lang="en" data-category="conference" target="_blank" rel="noopener">
+                    <div class="pub-badge conference">Conference</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.conf2">Apache Community over Code Asia 2025 <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">Session Speaker &middot; 2025</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <!-- === Blogs === -->
+                <a href="https://aws.amazon.com/blogs/big-data/dive-deep-into-security-management-the-data-on-eks-platform/" class="pub-item manga-card" data-lang="en" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog">Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog1">Dive Deep into Security Management: The Data on EKS Platform <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">AWS Global Blog &middot; EKS &middot; Security</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://awstip.com/real-time-asr-business-scenarios-platform-choices-and-benchmarking-on-sagemaker-ai-2a19b585d89f" class="pub-item manga-card" data-category="blog" data-lang="en" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-medium">Medium</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog16">Real-Time ASR: Business Scenarios, Platform Choices &amp; Benchmarking on SageMaker AI <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">AWS Tip &middot; ASR &middot; SageMaker AI &middot; Benchmarking</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://awstip.com/using-kiros-spec-driven-development-to-accelerate-data-quality-initiatives-23f2a2fc2191" class="pub-item manga-card" data-category="blog" data-lang="en" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-medium">Medium</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog17">Using Kiro's Spec-Driven Development to Accelerate Data Quality Initiatives <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">AWS Tip &middot; Kiro &middot; Data Quality &middot; Spec-Driven</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://medium.com/@seanzhang92/build-text-vector-etl-pipelines-with-apache-seatunnel-and-amazon-opensearch-c74774a1a6f8" class="pub-item manga-card" data-category="blog" data-lang="en" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-medium">Medium</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog18">Build Text Vector ETL Pipelines with Apache SeaTunnel and Amazon OpenSearch <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">Medium &middot; SeaTunnel &middot; OpenSearch &middot; Vector ETL</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://medium.com/@seanzhang92/using-apache-seatunnel-for-fast-data-integration-into-s3-tables-7922262940c6" class="pub-item manga-card" data-category="blog" data-lang="en" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-medium">Medium</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog19">Using Apache SeaTunnel for Fast Data Integration into S3 Tables <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">Medium &middot; SeaTunnel &middot; S3 Tables &middot; Data Integration</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://medium.com/@seanzhang92/dbt-on-amazon-redshift-data-quality-agent-e29b19d2eea7" class="pub-item manga-card" data-category="blog" data-lang="en" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-medium">Medium</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog20">dbt on Amazon Redshift Data Quality Agent <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">Medium &middot; dbt &middot; Redshift &middot; Data Quality Agent</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/cisco-uses-apache-dolphinscheduler-to-build-a-big-data-system-on-aws/" class="pub-item manga-card" data-category="blog" data-lang="cn" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog2">Cisco 使用 Apache DolphinScheduler 在 AWS 构建大数据系统实践 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; DolphinScheduler &middot; Big Data</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/build-a-data-lake-from-scratch-in-one-minute-using-amazon-s3-tables" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog3">一分钟从零构建数据湖，S3 Tables 究竟有啥魔力？ <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; S3 Tables &middot; Data Lake</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/apache-seatunnel-and-amazon-bedrock-enable-generative-ai-applications-to-scale-to-production-practice/" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog4">Apache SeaTunnel &amp; Amazon Bedrock 助力生成式 AI 应用规模化生产实践 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; SeaTunnel &middot; Bedrock &middot; GenAI</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/data-task-scheduling-using-apache-dolphinscheduler-on-aws/" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog5">深度剖析 – 基于亚马逊云科技使用 Apache DolphinScheduler 进行数据任务调度 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; DolphinScheduler &middot; Scheduling</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/aws-deployment-serverless-dolphinscheduler" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog6">AWS 部署无服务器 DolphinScheduler <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; Serverless &middot; DolphinScheduler</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/amazon-q-in-quicksight-in-action-using-natural-language-to-quickly-generate-data-reports-and-insights" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog7">Amazon Q in QuickSight 实战：利用自然语言快速生成数据报表与洞察 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; QuickSight &middot; Amazon Q</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/amazon-dynamodb-flink-sql-real-time-computing-in-practice" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog8">Amazon DynamoDB Flink SQL 实时计算实践 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; DynamoDB &middot; Flink SQL</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/using-automq-to-optimize-kafka-costs-and-efficiency-at-scale" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog9">使用 AutoMQ 实现 Kafka 大规模成本及效率优化 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; AutoMQ &middot; Kafka</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/processing-change-data-streams-with-flink-hudi-and-data-analysis-with-redshift-spectrum" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog10">使用 Flink Hudi 处理变更数据流并通过 Redshift Spectrum 进行数据分析实践 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; Flink &middot; Hudi &middot; Redshift</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/simplify-mwaa-airflow-task-scheduling-development-with-dynamodb" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog11">使用 DynamoDB 简化 MWAA（Airflow）任务调度开发 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; DynamoDB &middot; MWAA &middot; Airflow</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/simplify-the-data-collection-pipeline-with-kafka-connect" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog12">使用 Kafka Connect 简化数据采集管道 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; Kafka Connect &middot; Data Pipeline</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/how-to-build-an-e-commerce-review-analysis-voc-system-based-on-amazon-bedrock" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog13">如何基于 Amazon Bedrock 构建电商评论分析（VOC）系统？ <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; Bedrock &middot; VOC &middot; E-commerce</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/e-commerce-image-retrieval-solution-based-on-amazon-bedrock" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog14">基于 Amazon Bedrock 的电商行业图片检索解决方案 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; Bedrock &middot; Image Search</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://aws.amazon.com/cn/blogs/china/strands-agents-quick-start-dbt-on-amazon-redshift-data-quality-agent/" class="pub-item manga-card" data-lang="cn" data-category="blog" target="_blank" rel="noopener">
+                    <div class="pub-badge blog-gcr">GCR Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.blog15">Strands Agents 快速上手 – dbt on Amazon Redshift 数据质量智能体 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">AWS GCR Blog &middot; Strands Agents &middot; dbt &middot; Redshift</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <!-- === Workshops === -->
+                <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/b223ce62-8d75-4474-a6b7-34ba77575cfc/zh-CN" class="pub-item manga-card" data-lang="cn" data-category="workshop" target="_blank" rel="noopener">
+                    <div class="pub-badge workshop">Workshop</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.ws1">智能电商搜索推荐系统 Workshop <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Hands-on Workshop &middot; E-commerce &middot; Search &middot; Recommendation</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/4440ed31-a824-4844-9458-a8be2771015a/zh-CN" class="pub-item manga-card" data-lang="cn" data-category="workshop" target="_blank" rel="noopener">
+                    <div class="pub-badge workshop">Workshop</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.ws2">电商评论 VOC 分析系统 Workshop <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Hands-on Workshop &middot; VOC &middot; NLP Analysis</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/6ded41c1-43b9-42a3-b248-fc342a84b1a4/zh-CN" class="pub-item manga-card" data-lang="cn" data-category="workshop" target="_blank" rel="noopener">
+                    <div class="pub-badge workshop">Workshop</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.ws3">电商多模态搜图解决方案 Workshop <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Hands-on Workshop &middot; Multi-modal &middot; Image Search</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/f3651413-99b5-4df3-a74a-210423ab474d/zh-CN" class="pub-item manga-card" data-lang="cn" data-category="workshop" target="_blank" rel="noopener">
+                    <div class="pub-badge workshop">Workshop</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.ws4">亚马逊云开源数据软件实验工作坊 <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Hands-on Workshop &middot; Open Source &middot; Data</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <!-- === Meetups === -->
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/techtalk?id=67235125b57f11261d98ff9b" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu1">Apache Celeborn &amp; AWS TechTalk <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; Celeborn &middot; AWS</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/techtalk?id=66f0e96d9f9a1e5562262c48" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu2">Data For AI Tech Talk <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; Data &middot; AI</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/techtalk?id=669e154ec38f79279ceda8ab" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu3">数据仓库与数据建模 Tech Talk <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; Data Warehouse &middot; Modeling</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/techtalk?id=668d02341a6e3100cd0fe624" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu4">流式数据湖 Tech Talk <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; Streaming &middot; Data Lake</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/meetup?id=6723487d5051611ff0b2eed0" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu5">dbt Meet Up <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; dbt &middot; Data Transformation</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/meetup?id=6662a8852a56576f1e79e606" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu6">Apache DolphinScheduler &amp; AWS Meet Up <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; DolphinScheduler</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.amazoncloud.cn/activity/activityDetail/meetup?id=666c1c8b593ad73f09d867ba" class="pub-item manga-card" data-lang="cn" data-category="meetup" target="_blank" rel="noopener">
+                    <div class="pub-badge meetup">Meetup</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.mu7">Apache SeaTunnel &amp; AWS Meet Up <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Developer Meetup &middot; SeaTunnel</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <!-- === Open Source === -->
+                <a href="https://github.com/apache/seatunnel/pull/9330" class="pub-item manga-card" data-lang="en" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource">GitHub PR</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.pr1">Apache SeaTunnel - OpenSearch/Elasticsearch Vector Support <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">GitHub Pull Request &middot; Vector Search</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://github.com/apache/seatunnel/pull/9120" class="pub-item manga-card" data-lang="en" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource">GitHub PR</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.pr2">Apache SeaTunnel - Amazon Bedrock Integration <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">GitHub Pull Request &middot; Bedrock &middot; GenAI</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://github.com/apache/seatunnel/pull/9686" class="pub-item manga-card" data-lang="en" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource">GitHub PR</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.pr3">Apache SeaTunnel - S3 Tables Integration <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">GitHub Pull Request &middot; S3 Tables</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://mp.weixin.qq.com/s/uHZ8ALQP7ocViNau0xYxJQ" class="pub-item manga-card" data-lang="cn" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource-blog">OSS Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.oss1">Apache Iceberg <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Open Source Community Blog</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://mp.weixin.qq.com/s/2Hddlswo-jwksYuDX_TX0w" class="pub-item manga-card" data-lang="cn" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource-blog">OSS Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.oss2">Apache DolphinScheduler <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Open Source Community Blog</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://mp.weixin.qq.com/s/mriaHo-VBcwBeexA9y0FTQ" class="pub-item manga-card" data-lang="cn" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource-blog">OSS Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.oss3">Apache SeaTunnel <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Open Source Community Blog</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://mp.weixin.qq.com/s/ldYT3SCLgV0tbppJxYx3DA" class="pub-item manga-card" data-lang="cn" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource-blog">OSS Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.oss4">Apache Hudi <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Open Source Community Blog</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://mp.weixin.qq.com/s/438sJdt44Cj1Yj0TF0je1Q" class="pub-item manga-card" data-lang="cn" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource-blog">OSS Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.oss5">Apache Zeppelin &amp; Airflow <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">Open Source Community Blog</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://dev.to/seatunnel/building-a-semantic-search-system-with-apache-seatunnel-and-amazon-bedrock-4dof" class="pub-item manga-card" data-lang="en" data-category="opensource" target="_blank" rel="noopener">
+                    <div class="pub-badge opensource-blog">OSS Blog</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.oss6">Apache SeaTunnel &amp; Bedrock <span class="lang-tag lang-en">EN</span></h3>
+                        <p class="pub-meta">Open Source Community Blog</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <!-- === E-Learning === -->
+                <a href="https://skillbuilder.aws/learn/GS71P6X7WZ/seatunnel--amazon-bedrock--ai--/5Y85F89VY7" class="pub-item manga-card" data-lang="cn" data-category="elearning" target="_blank" rel="noopener">
+                    <div class="pub-badge elearning">E-Learning</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.el1">SeaTunnel &amp; Amazon Bedrock <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">T&amp;C Skill Builder &middot; E-Learning Content</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://skillbuilder.aws/learn/6DR8V46Q3W/amazon-s3-tables--/MMDBM44SWA" class="pub-item manga-card" data-lang="cn" data-category="elearning" target="_blank" rel="noopener">
+                    <div class="pub-badge elearning">E-Learning</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title" data-i18n="pub.el2">Amazon S3 Tables <span class="lang-tag lang-cn">CN</span></h3>
+                        <p class="pub-meta">T&amp;C Skill Builder &middot; E-Learning Content</p>
+                    </div>
+                    <span class="pub-arrow">&rarr;</span>
+                </a>
+
+            </div>
+            <button class="load-more-btn manga-card" id="loadMoreBtn" data-i18n="blog.loadmore">Load More</button>
+        </div>
+    </section>
+
+    <!-- Artwork Section -->
+    <section class="section artwork-section" id="artwork">
+        <div class="container">
+            <div class="section-header">
+                <div class="comic-title-wrapper">
+                    <h2 class="section-title comic-title">
+                        <span class="title-icon">&#x1F3A8;</span>
+                        <span data-i18n="art.title">Hand-drawn Artwork</span>
+                    </h2>
+                    <div class="comic-title-bg"></div>
+                </div>
+                <p class="section-subtitle" data-i18n="art.subtitle">Dragon Ball fan art, anime characters, and original hand drawings</p>
+            </div>
+
+            <div class="artwork-grid">
+                <div class="artwork-item manga-card" data-artwork="images/art-drawing-process.png">
+                    <div class="artwork-frame">
+                        <img src="images/art-drawing-process.png" alt="Drawing Process" class="artwork-img" loading="lazy">
+                        <div class="artwork-overlay">
+                            <h3 data-i18n="art.item1.title">Drawing Process</h3>
+                            <p data-i18n="art.item1.desc">Work in progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artwork-item manga-card" data-artwork="images/art-dodecahedron.jpg">
+                    <div class="artwork-frame">
+                        <img src="images/art-dodecahedron.jpg" alt="Dodecahedron Sketch" class="artwork-img" loading="lazy">
+                        <div class="artwork-overlay">
+                            <h3 data-i18n="art.item2.title">Dodecahedron Sketch</h3>
+                            <p data-i18n="art.item2.desc">Pencil shading practice</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artwork-item manga-card" data-artwork="images/art-goku.jpg">
+                    <div class="artwork-frame">
+                        <img src="images/art-goku.jpg" alt="Dragon Ball - Goku" class="artwork-img" loading="lazy">
+                        <div class="artwork-overlay">
+                            <h3 data-i18n="art.item3.title">Dragon Ball - Goku</h3>
+                            <p data-i18n="art.item3.desc">Ink illustration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artwork-item manga-card" data-artwork="images/art-dragonball-scene.jpg">
+                    <div class="artwork-frame">
+                        <img src="images/art-dragonball-scene.jpg" alt="Dragon Ball - Adventure" class="artwork-img" loading="lazy">
+                        <div class="artwork-overlay">
+                            <h3 data-i18n="art.item4.title">Dragon Ball - Adventure</h3>
+                            <p data-i18n="art.item4.desc">Ink and pencil illustration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artwork-item manga-card" data-artwork="images/art-kame-house.jpg">
+                    <div class="artwork-frame">
+                        <img src="images/art-kame-house.jpg" alt="Dragon Ball - Kame House" class="artwork-img" loading="lazy">
+                        <div class="artwork-overlay">
+                            <h3 data-i18n="art.item5.title">Dragon Ball - Kame House</h3>
+                            <p data-i18n="art.item5.desc">Ink landscape illustration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section resume-section" id="resume">
+        <div class="container">
+            <div class="section-header">
+                <div class="comic-title-wrapper">
+                    <h2 class="section-title comic-title">
+                        <span class="title-icon">&#x1F4CB;</span>
+                        <span data-i18n="resume.title">Resume</span>
+                    </h2>
+                    <div class="comic-title-bg"></div>
+                </div>
+                <p class="section-subtitle" data-i18n="resume.subtitle">Professional journey, certifications, and skill set</p>
+            </div>
+
+            <div class="resume-layout">
+                <!-- Left column -->
+                <div class="resume-sidebar">
+                    <div class="resume-card manga-card">
+                        <h3 class="resume-card-title" data-i18n="resume.skills">Core Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">AWS / Cloud Architecture</span>
+                                    <span class="skill-level">95%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 95%; --color: #FF9900"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Big Data / Analytics</span>
+                                    <span class="skill-level">92%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 92%; --color: #4285F4"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Gen AI / LLMs / Bedrock</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 90%; --color: #EA4335"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Apache Open Source (SeaTunnel, Hudi, Iceberg, etc.)</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 90%; --color: #FBBC05"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Kubernetes / EKS / CKAD</span>
+                                    <span class="skill-level">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 88%; --color: #326CE5"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">DevOps / CI-CD / IaC</span>
+                                    <span class="skill-level">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 88%; --color: #34A853"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">GPU / CUDA / NVIDIA</span>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="--width: 80%; --color: #76B900"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-card manga-card">
+                        <h3 class="resume-card-title" data-i18n="resume.certs">Certifications (14+)</h3>
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #76B900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">NVIDIA Certified Professional: Gen AI LLMs</span>
+                                    <span class="cert-year">2026</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #76B900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">NVIDIA Certified Professional: Accelerated Data Science</span>
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified DevOps Engineer - Professional</span>
+                                    <span class="cert-year">2025</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #326CE5">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">CKAD: Certified Kubernetes Application Developer</span>
+                                    <span class="cert-year">2024</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #0078D4">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">Career Essentials in Generative AI - Microsoft</span>
+                                    <span class="cert-year">2024</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #76B900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">Accelerated Computing with CUDA Python - NVIDIA</span>
+                                    <span class="cert-year">2024</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified Security - Specialty</span>
+                                    <span class="cert-year">2023</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified Machine Learning - Specialty</span>
+                                    <span class="cert-year">2023</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified Advanced Networking - Specialty</span>
+                                    <span class="cert-year">2022</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified Database - Specialty</span>
+                                    <span class="cert-year">2022</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified Solutions Architect - Professional</span>
+                                    <span class="cert-year">2022</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #FF9900">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">AWS Certified Data Analytics - Specialty</span>
+                                    <span class="cert-year">2021</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #EA4335">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">HCIE Data Mining - Huawei</span>
+                                    <span class="cert-year">2019</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon" style="--color: #4285F4">&#9733;</div>
+                                <div class="cert-info">
+                                    <span class="cert-name">IPMP - International Project Management Association</span>
+                                    <span class="cert-year">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-card manga-card">
+                        <h3 class="resume-card-title" data-i18n="resume.contact">Contact</h3>
+                        <div class="contact-list">
+                            <a href="https://www.linkedin.com/in/singhzhang/" class="contact-item" target="_blank" rel="noopener">
+                                <span class="contact-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/SEZ9" class="contact-item" target="_blank" rel="noopener">
+                                <span class="contact-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:seanzhang92@gmail.com" class="contact-item">
+                                <span class="contact-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                </span>
+                                <span>seanzhang92@gmail.com</span>
+                            </a>
+                            <a href="https://www.youtube.com/@kiwiberry-ai" class="contact-item" target="_blank" rel="noopener">
+                                <span class="contact-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                </span>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="resume-main">
+                    <div class="resume-card manga-card">
+                        <h3 class="resume-card-title" data-i18n="resume.experience">Experience</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #FF9900"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.exp1.title">Senior Solutions Architect</h4>
+                                        <span class="timeline-date">Sep 2022 - Present</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.exp1.company">Amazon Web Services (AWS) | Shenzhen</p>
+                                    <p class="timeline-desc" data-i18n="resume.exp1.desc">Specializing in Data & AI solutions for enterprise clients. Architecting cloud-native big data platforms, GenAI/LLM applications, and GPU-accelerated inference. Led open-source integration with Apache SeaTunnel, DolphinScheduler & OpenSearch. Published 22+ blogs, hosted events attracting 9,000+ developers. Recognized as Top SA 2025.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #00BCD4"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.exp2.title">Senior Manager, Data</h4>
+                                        <span class="timeline-date">Jan 2021 - Sep 2022</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.exp2.company">Klook | Shenzhen</p>
+                                    <p class="timeline-desc" data-i18n="resume.exp2.desc">Led architecture design and team building for all data engineering. Managed real-time data warehouse and risk control systems. Designed multi-cloud data platform (GCP, AWS, Alibaba Cloud).</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #EA4335"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.exp3.title">Senior Software Engineer</h4>
+                                        <span class="timeline-date">Mar 2020 - Jan 2021</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.exp3.company">Huawei | Shenzhen</p>
+                                    <p class="timeline-desc" data-i18n="resume.exp3.desc">Architecture design of FusionInsight big data hybrid cloud platform including RTD engine. Implemented real-time big data for financial anti-fraud systems. Maintained Flink, Redis, Kafka, ClickHouse.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #FBBC05"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.exp4.title">Senior Software Engineer</h4>
+                                        <span class="timeline-date">Feb 2018 - Mar 2020</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.exp4.company">Evergrande Group | Shenzhen</p>
+                                    <p class="timeline-desc" data-i18n="resume.exp4.desc">Early member of big data department. Designed comprehensive big data platform integrating real estate, insurance, wealth management, and IoT into unified BI. Hadoop ecosystem & hybrid IDC/Cloud architecture.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #4285F4"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.exp5.title">Software Engineer</h4>
+                                        <span class="timeline-date">Mar 2014 - Dec 2016</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.exp5.company">Ruijie Networks | Xi'an</p>
+                                    <p class="timeline-desc" data-i18n="resume.exp5.desc">Development of Ruijie's Wireless Network Management System.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-card manga-card">
+                        <h3 class="resume-card-title" data-i18n="resume.highlights">Highlights</h3>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <span class="highlight-number" style="--color: #FF9900">20+</span>
+                                <span class="highlight-label" data-i18n="resume.hl.blogs">Published Blogs</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number" style="--color: #EA4335">14+</span>
+                                <span class="highlight-label" data-i18n="resume.hl.certs">Certifications</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number" style="--color: #4285F4">7+</span>
+                                <span class="highlight-label" data-i18n="resume.hl.meetups">Meetups & Talks</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number" style="--color: #34A853">6+</span>
+                                <span class="highlight-label" data-i18n="resume.hl.oss">Apache OSS Projects</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number" style="--color: #FBBC05">4+</span>
+                                <span class="highlight-label" data-i18n="resume.hl.workshops">Workshops</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number" style="--color: #76B900">3</span>
+                                <span class="highlight-label" data-i18n="resume.hl.prs">GitHub PRs (Apache)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-card manga-card">
+                        <h3 class="resume-card-title" data-i18n="resume.education">Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #34A853"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.edu1.title">M.Eng. Engineering Management (Big Data)</h4>
+                                        <span class="timeline-date">2017 - 2019</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.edu1.school">Xi'an Jiaotong University</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot" style="--color: #4285F4"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 data-i18n="resume.edu2.title">B.S. Computer Science and Technology</h4>
+                                        <span class="timeline-date">2010 - 2014</span>
+                                    </div>
+                                    <p class="timeline-company" data-i18n="resume.edu2.school">Xi'an University of Science and Technology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-download">
+                        <a href="https://www.linkedin.com/in/singhzhang/" target="_blank" rel="noopener" class="btn btn-primary comic-btn" data-i18n="resume.download">View Full Profile on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Xin</span>
+                    <span class="logo-slash">/</span>
+                    <span class="logo-bracket">&gt;</span>
+                </div>
+                <p class="footer-text" data-i18n="footer.text">Senior Cloud Architect | Open Source Contributor | Hand-drawn Art Enthusiast | Tech Blogger</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/singhzhang/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/SEZ9" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@kiwiberry-ai" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="mailto:seanzhang92@gmail.com" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy; 2025 Xin Zhang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Artwork Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-frame manga-card">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <div class="lightbox-img-wrap">
+                <img src="" alt="" id="lightboxImg">
+            </div>
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
